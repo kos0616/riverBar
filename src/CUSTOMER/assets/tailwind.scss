@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: var(--el-color-primary);
+    --color-label: #e3f3f0;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#f8fbfc] text-[#303030] transition-colors dark:bg-neutral-900 dark:text-zinc-400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    @apply mb-2 dark:text-stone-400;
+  }
+}
+
+@layer components {
+  .toolbar {
+    @apply fixed bottom-3 right-0 z-10 rounded-l-full bg-white p-2 shadow;
+    @media screen and (min-width: 640px) {
+      @apply static bg-transparent p-0 text-right shadow-none;
+    }
+  }
+
+  /** 訊息卡片樣式 */
+  .info-section {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border-style: solid;
+    border-color: var(--white, #ffffff);
+    border-width: 2px;
+    padding: 16px 20px;
+    box-shadow: 0px 4px 20px 0px rgba(28, 98, 138, 0.15);
+    // overflow: hidden;
+    backdrop-filter: blur(3px);
+  }
+
+  /** 表格標籤樣式 */
+  .my-nav {
+    @apply overflow-x-auto rounded-t text-[#707275];
+    @media screen and (max-width: 767px) {
+      @apply info-section mb-5 rounded-full bg-white p-1;
+    }
+
+    .my-label {
+      @media screen and (max-width: 767px) {
+        @apply flex-1 rounded-full px-3 py-2 text-center text-[14px] has-[:checked]:bg-primary has-[:checked]:text-white;
+      }
+      @media screen and (min-width: 768px) {
+        &:has(:checked) {
+          box-shadow: 0px 4px 20px 0px rgba(28, 98, 138, 0.15);
+        }
+        @apply relative z-[1] px-5 py-3 pb-3 has-[:checked]:rounded-t-[20px] has-[:checked]:bg-white has-[:checked]:text-primary-400 has-[:checked]:shadow-sm;
+      }
+    }
+  }
+}

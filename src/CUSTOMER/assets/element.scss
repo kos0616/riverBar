@@ -1,0 +1,233 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  // 調整 primary color
+  $colors:
+    (
+      'primary': (
+        'base': #25b1a1
+      ),
+      'warning': (
+        'base': #ffff54
+      ),
+      'success': (
+        'base': #72be38
+      )
+    ),
+  // 修正基礎文字大小
+  $font-size: ('base': 16px),
+  // 修正預設的、不帶樣式的基礎文字顏色
+  $text-color: ('regular': inherit),
+  // 依據水利署顏色定義原則，將開關設為 綠色 success 與 灰色 info
+  $switch: ('on-color': var(--el-color-primary), 'off-color': var(--el-color-info)),
+  // 根據設計師UI之修改部分
+  $button-border-radius: ('large': 8px, 'default': 8px, 'small': calc(8px - 1px)),
+  // TODO: 重新檢查 large 與 small的尺寸
+  $common-component-size: ('large': 50px, 'default': 47px, 'small': 24px),
+  // input border and other default border color
+  $border-color: ('': #cde1de),
+  $button: ('border-color': var(--el-color-primary), 'text-color': var(--el-color-primary)),
+  $messagebox: ('border-radius': 16px, 'padding-primary': 20px),
+  $dialog: ('border-radius': 16px, 'padding-primary': 20px),
+  $table: ('tr-bg-color': transparent, 'bg-color': transparent, 'border-color': #cccccc),
+  $tag: ('font-size': 16px)
+);
+
+@use 'element-plus/theme-chalk/src/index.scss' as *;
+// @use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+// rwd 調整注意事項 裝置斷點為640px
+
+/** 修正 ios手機自動放大 in select mulity */
+.el-select__wrapper {
+  font-size: 16px;
+}
+/** 根據設計師UI之修改部分 */
+/** table */
+.el-table {
+  /** $table-font-size 改不動 */
+  font-size: 18px;
+  /** 隱藏 th 底下的 border */
+  th.el-table__cell.is-leaf {
+    --el-table-border: 1px solid transparent;
+  }
+  /** 調整雙數行背景顏色 */
+  --el-fill-color-lighter: #e8eff066;
+  --el-table-header-text-color: #303030;
+  --el-table-row-hover-bg-color: #e5fbf7;
+
+  &.is-scrolling-middle,
+  &.is-scrolling-right {
+    /** 側向滾動時的style */
+    .el-table__row {
+      --el-table-tr-bg-color: white;
+      --el-fill-color-lighter: #e8eff0;
+    }
+  }
+  /** 帶陰影的表頭 可能會影響畫面，有狀況就移除 */
+  // overflow: visible;
+  .el-table__header-wrapper,
+  .el-table__body-header {
+    filter: drop-shadow(0px 2px 5px rgba(28, 98, 138, 0.15));
+    // box-shadow: 0px 2px 12px 0px rgba(28, 98, 138, 0.15);
+  }
+}
+
+.el-table__header,
+.el-table__body-header {
+  th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  th:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+/**
+  * 客製化表單 
+  * 特徵是label為藍色背景，且上下有弧形
+  * 需滿足的條件:
+  * 1. <el-form class="my-form" label-position="left" label-width="120">
+  * 2. 不能參雜其他的 div，否則會打亂first/last-of-type
+ */
+.my-form.el-form {
+  .el-form-item {
+    margin-bottom: 0;
+    gap: 10px;
+
+    /** 表單的頭尾會有弧形， ** 請注意千萬不要使用 <div> 會打壞 first/last-of-type ** */
+    &:first-of-type > .el-form-item__label {
+      @apply rounded-t-xl;
+    }
+    &:last-of-type > .el-form-item__label {
+      @apply rounded-b-xl;
+    }
+
+    .el-form-item__label {
+      align-items: center;
+      background-color: var(--color-label);
+      padding: 12px 20px;
+      height: auto;
+      line-height: inherit;
+    }
+
+    .el-form-item__error {
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .el-form-item__content {
+      padding: 6px;
+      @media screen and (min-width: 640px) {
+        padding: 6px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .el-button:not(.is-circle) {
+    min-width: 80px;
+    height: auto;
+  }
+}
+
+.el-overlay {
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+}
+
+@mixin shared-styles {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.el-dialog__title {
+  padding: 8px 20px 8px 20px;
+  background: var(--el-color-primary);
+  color: white;
+  font-weight: 700;
+  @include shared-styles;
+  &:empty {
+    display: none;
+  }
+}
+/** 將 messagebox 調整成稿件樣式 */
+/** icon 會突出 messagebox */
+@mixin icon-style {
+  border: 5px solid #d8e4e3;
+  background-color: white;
+  width: 48px;
+  height: 48px;
+  font-size: 200%;
+  @include shared-styles;
+
+  /** icon color */
+  &.el-message-box-icon--info {
+    color: var(--el-color-primary);
+  }
+  &.el-message-box-icon--warning {
+    --el-color-warning: #64281e;
+  }
+}
+.el-message-box {
+  overflow: unset;
+
+  .el-message-box__container .el-icon.el-message-box__status {
+    @include icon-style;
+  }
+  .el-message-box__header {
+    padding-right: 0;
+    .el-message-box__title {
+      font-size: 18px;
+      font-weight: bold;
+      /** 修正icon 與文字過於靠近 */
+      padding-top: 0.5rem;
+
+      /** 僅針對 el-message box 上的icon */
+      .el-icon {
+        @include icon-style;
+      }
+    }
+  }
+}
+// end
+
+/** 修正 el-message warning 背景色與文字顏色過於相近的問題 */
+.el-message--warning {
+  --el-message-text-color: #64281e;
+}
+
+.el-dropdown {
+  line-height: inherit;
+}
+.el-input__wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/** 微調 card header 過高問題 */
+.el-card__header {
+  padding: 8px var(--el-card-padding);
+}
+
+/** fixing dialog top gap problem */
+.el-dialog__body {
+  padding-top: 8px;
+}
+
+/** 
+ * small mobile dialog fixing
+ * 小手機無論如何都會修正 width 避免超出範圍
+ */
+@media screen and (max-width: 639px) {
+  .el-dialog {
+    --el-dialog-width: calc(100vw - 1.5rem) !important;
+  }
+}
+
+/** 修正 el-message-box 因為同時顯示過多導致黑壓壓一片的問題 */
+.el-overlay.is-message-box:not(:last-child) {
+  @apply opacity-0 transition-opacity;
+}

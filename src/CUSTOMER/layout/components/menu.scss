@@ -1,0 +1,21 @@
+.menu-btn {
+  @apply flex h-14 w-full items-center gap-1 text-nowrap border-r-4 border-transparent px-4 text-left transition-colors;
+  & > img {
+    transition: filter 0.2s;
+    @apply grayscale;
+  }
+
+  &:hover {
+    @apply border-primary bg-zinc-100;
+    > img {
+      @apply grayscale-0;
+    }
+  }
+
+  &.router-link-active {
+    @apply border-primary bg-[#E5fbf7];
+    > img {
+      @apply grayscale-0;
+    }
+  }
+}

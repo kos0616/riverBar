@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="320.47"
+  height="103.81499"
+  viewBox="0 0 320.47001 103.81499"
+  fill="none"
+  version="1.1"
+  id="svg5"
+  sodipodi:docname="gate-rubber.svg"
+  inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+    id="namedview2"
+    pagecolor="#505050"
+    bordercolor="#eeeeee"
+    borderopacity="1"
+    inkscape:showpageshadow="0"
+    inkscape:pageopacity="0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#505050"
+    inkscape:zoom="1.7406902"
+    inkscape:cx="131.26977"
+    inkscape:cy="58.022961"
+    inkscape:window-width="1920"
+    inkscape:window-height="1027"
+    inkscape:window-x="0"
+    inkscape:window-y="25"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="svg5" />
+  <path
+    d="M 314.78,0 H 269.95 C 243.46,10.86 204.14,17.73 160.23,17.73 116.32,17.73 77,10.85 50.51,0 H 5.68 C 5.68,0 0,0 0,52.005 c 0,51 5.68,51 5.68,51 h 309.11 c 0,0 5.68,0 5.68,-51.000002 C 320.47,0 314.78,0 314.78,0 Z"
+    style="fill:url(#SVGID_26_)"
+    id="path1" />
+  <path
+    d="m 205.47,103.815 h -90.48 l 4.48,-86.73 c 0,0 0,-10.92 40.94,-10.92 40.94,0 40.94,10.92 40.94,10.92 z"
+    style="opacity:0.6;fill:url(#SVGID_27_)"
+    id="path2" />
+  <defs
+    id="defs2">
+    <linearGradient
+      id="SVGID_26_"
+      gradientUnits="userSpaceOnUse"
+      x1="855.42902"
+      y1="483.85349"
+      x2="855.42902"
+      y2="553.19739"
+      gradientTransform="translate(-695.2,-483.85)">
+      <stop
+        offset="0"
+        style="stop-color: #b3b3b3"
+        id="stop64" />
+      <stop
+        offset="0.0535"
+        style="stop-color: #a2a2a2"
+        id="stop65" />
+      <stop
+        offset="0.2237"
+        style="stop-color: #717171"
+        id="stop66" />
+      <stop
+        offset="0.3928"
+        style="stop-color: #484848"
+        id="stop67" />
+      <stop
+        offset="0.5573"
+        style="stop-color: #292929"
+        id="stop68" />
+      <stop
+        offset="0.716"
+        style="stop-color: #121212"
+        id="stop69" />
+      <stop
+        offset="0.8665"
+        style="stop-color: #050505"
+        id="stop70" />
+      <stop
+        offset="1"
+        style="stop-color: #000000"
+        id="stop71" />
+    </linearGradient>
+    <linearGradient
+      id="SVGID_27_"
+      gradientUnits="userSpaceOnUse"
+      x1="855.42902"
+      y1="553.05902"
+      x2="855.42902"
+      y2="487.95941"
+      gradientTransform="translate(-695.2,-483.85)">
+      <stop
+        offset="0"
+        style="stop-color: #cce0f4"
+        id="stop72" />
+      <stop
+        offset="0.0641"
+        style="stop-color: #c3dcf2"
+        id="stop73" />
+      <stop
+        offset="0.1706"
+        style="stop-color: #a9d2ee"
+        id="stop74" />
+      <stop
+        offset="0.3066"
+        style="stop-color: #80c2e7"
+        id="stop75" />
+      <stop
+        offset="0.4649"
+        style="stop-color: #47acde"
+        id="stop76" />
+      <stop
+        offset="0.5674"
+        style="stop-color: #1e9cd7"
+        id="stop77" />
+      <stop
+        offset="0.8652"
+        style="stop-color: #0075be"
+        id="stop78" />
+      <stop
+        offset="0.9944"
+        style="stop-color: #005b97"
+        id="stop79" />
+    </linearGradient>
+  </defs>
+</svg>

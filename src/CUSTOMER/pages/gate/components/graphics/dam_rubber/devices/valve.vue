@@ -1,0 +1,167 @@
+<template>
+  <svg
+    width="66.708038"
+    height="35.927998"
+    viewBox="0 0 83.38505 44.909998"
+    fill="none"
+    version="1.1"
+    id="svg5"
+    sodipodi:docname="dam-rubber-valve.svg"
+    inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    class="aspect-square h-auto w-full"
+  >
+    <rect
+      x="9.8400269"
+      y="8.985014"
+      class="st21"
+      width="63.709999"
+      height="27.355"
+      id="rect38"
+      style="fill: url(#SVGID_19_); stroke-width: 0.5"
+    />
+    <circle
+      class="st22"
+      cx="41.689999"
+      cy="22.455"
+      r="22.455"
+      id="circle40"
+      style="fill: url(#SVGID_20_); stroke-width: 0.5"
+    />
+    <circle :class="lightClass" cx="41.689999" cy="22.410017" r="17.280001" id="light" />
+    <path
+      class="st24"
+      d="m 41.690025,5.1300073 c -9.545,0 -17.28,7.7349997 -17.28,17.2799997 0,9.545 7.735,17.28 17.28,17.28 9.545,0 17.28,-7.735 17.28,-17.28 0,-9.545 -7.735,-17.2799997 -17.28,-17.2799997 z m 0,32.1349997 c -8.205,0 -14.855,-6.65 -14.855,-14.855 0,-8.205 6.65,-14.8549997 14.855,-14.8549997 8.205,0 14.855,6.6499997 14.855,14.8549997 0.005,8.205 -6.645,14.855 -14.855,14.855 z"
+      id="path42-3"
+      style="opacity: 0.5; fill: url(#SVGID_21_); stroke-width: 0.5"
+    />
+    <rect
+      x="0"
+      y="4.4999981"
+      class="st25"
+      width="9.8400002"
+      height="35.915001"
+      id="rect44"
+      style="fill: url(#SVGID_22_); stroke-width: 0.5"
+    />
+    <rect
+      x="73.545044"
+      y="4.4999981"
+      width="9.8400002"
+      height="35.915001"
+      id="rect46"
+      style="fill: url(#SVGID_23_); stroke-width: 0.5"
+    />
+    <polygon
+      points="102.96,522.54 131.9,505.83 160.85,522.54 163.21,518.47 134.26,501.76 134.26,468.33 129.55,468.33 129.55,501.76 100.6,518.47 "
+      id="polygon48"
+      style="fill: url(#SVGID_24_)"
+      transform="matrix(0.5,0,0,0.5,-24.262475,-229.03499)"
+    />
+    <defs id="defs64">
+      <linearGradient
+        id="SVGID_19_"
+        gradientUnits="userSpaceOnUse"
+        x1="131.905"
+        y1="476.03989"
+        x2="131.905"
+        y2="530.74951"
+        gradientTransform="matrix(0.5,0,0,0.5,-24.259975,-229.035)"
+      >
+        <stop offset="0" style="stop-color: #b3b3b3" id="stop37" />
+        <stop offset="1" style="stop-color: #666666" id="stop38" />
+      </linearGradient>
+      <radialGradient
+        id="SVGID_20_"
+        cx="131.905"
+        cy="502.98471"
+        r="44.910801"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="matrix(0.5,0,0,0.5,-24.259975,-229.035)"
+      >
+        <stop offset="2.744065e-03" style="stop-color: #e6e6e6" id="stop39" />
+        <stop offset="1" style="stop-color: #808080" id="stop40" />
+      </radialGradient>
+      <linearGradient
+        id="SVGID_21_"
+        gradientUnits="userSpaceOnUse"
+        x1="97.346199"
+        y1="502.8891"
+        x2="166.4637"
+        y2="502.8891"
+        gradientTransform="matrix(0.5,0,0,0.5,-24.259975,-229.035)"
+      >
+        <stop offset="0" style="stop-color: #666666" id="stop41" />
+        <stop offset="1" style="stop-color: #333333" id="stop42" />
+      </linearGradient>
+      <linearGradient
+        id="SVGID_22_"
+        gradientUnits="userSpaceOnUse"
+        x1="58.3573"
+        y1="467.0719"
+        x2="58.3573"
+        y2="538.89758"
+        gradientTransform="matrix(0.5,0,0,0.5,-24.259975,-229.035)"
+      >
+        <stop offset="0" style="stop-color: #999999" id="stop43" />
+        <stop offset="1" style="stop-color: #333333" id="stop44" />
+      </linearGradient>
+      <linearGradient
+        id="SVGID_23_"
+        gradientUnits="userSpaceOnUse"
+        x1="205.4527"
+        y1="467.0719"
+        x2="205.4527"
+        y2="538.89758"
+        gradientTransform="matrix(0.5,0,0,0.5,-24.259975,-229.035)"
+      >
+        <stop offset="0" style="stop-color: #999999" id="stop45" />
+        <stop offset="1" style="stop-color: #333333" id="stop46" />
+      </linearGradient>
+      <linearGradient
+        id="SVGID_24_"
+        gradientUnits="userSpaceOnUse"
+        x1="100.6046"
+        y1="495.4371"
+        x2="163.20551"
+        y2="495.4371"
+      >
+        <stop offset="0" style="stop-color: #666666" id="stop47" />
+        <stop offset="1" style="stop-color: #333333" id="stop48" />
+      </linearGradient>
+    </defs>
+  </svg>
+</template>
+
+<script setup lang="ts">
+/**
+  isIntakeError ? 'dynamic-color-error' : '',
+  isIntakeOpen ? 'dynamic-color-working-shine' : '',
+  isIntakeOnline ? 'fill-online' : 'fill-offline'
+ */
+
+import { computed } from 'vue';
+
+interface Props {
+  status?: 'error' | 'working' | 'online' | 'offline';
+}
+
+const props = defineProps<Props>();
+
+/** 馬達燈號 */
+const lightClass = computed(() => {
+  switch (props.status) {
+    case 'error':
+      return 'dynamic-color-error';
+    case 'working':
+      return 'dynamic-color-working-shine';
+    case 'online':
+      return 'fill-online';
+    default:
+      return 'fill-offline';
+  }
+});
+</script>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="18.637758"
+  height="170"
+  viewBox="0 0 18.637758 38.236328"
+  fill="none"
+  version="1.1"
+  id="svg5"
+  sodipodi:docname="arrow.svg"
+  inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <g
+    id="g1"
+    transform="translate(-195.68112,-295.51367)">
+    <path
+      id="path3"
+      class="anmLine"
+      style="color:#000000;fill:#ea232f;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;paint-order:markers stroke fill"
+      d="m 205,296.01367 c -0.0768,0 -0.15363,0.034 -0.20312,0.10352 l -8.47657,11.86719 c -0.378,0.52899 3.9e-4,1.26562 0.65039,1.26562 H 204 v 23 a 1,1 0 0 0 1,1 1,1 0 0 0 1,-1 v -23 h 7.0293 c 0.65,0 1.02839,-0.73663 0.65039,-1.26562 l -8.47657,-11.86719 c -0.0495,-0.0695 -0.12637,-0.10352 -0.20312,-0.10352 z" />
+    <path
+      id="path4"
+      class="anmLine"
+      style="--delay: 0.5s;color:#000000;fill:#ea232f;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;paint-order:markers
+    stroke fill"
+      d="m 205,296.01367 c -0.0768,0 -0.15363,0.034 -0.20312,0.10352 l -8.47657,11.86719 c -0.378,0.52899
+    3.9e-4,1.26562 0.65039,1.26562 H 204 v 23 a 1,1 0 0 0 1,1 1,1 0 0 0 1,-1 v -23 h 7.0293 c 0.65,0
+    1.02839,-0.73663 0.65039,-1.26562 l -8.47657,-11.86719 c -0.0495,-0.0695 -0.12637,-0.10352
+    -0.20312,-0.10352 z" />
+    <path
+      id="path5"
+      class="anmLine"
+      style="--delay: 1s;color:#000000;fill:#ea232f;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;paint-order:markers
+    stroke fill"
+      d="m 205,296.01367 c -0.0768,0 -0.15363,0.034 -0.20312,0.10352 l -8.47657,11.86719 c -0.378,0.52899
+    3.9e-4,1.26562 0.65039,1.26562 H 204 v 23 a 1,1 0 0 0 1,1 1,1 0 0 0 1,-1 v -23 h 7.0293 c 0.65,0
+    1.02839,-0.73663 0.65039,-1.26562 l -8.47657,-11.86719 c -0.0495,-0.0695 -0.12637,-0.10352
+    -0.20312,-0.10352 z" />
+  </g>
+
+  <style>
+    .anmLine {
+    opacity: 0;
+    animation: dash 1.5s linear infinite;
+    animation-delay: var(--delay, 0);
+    }
+
+    @keyframes dash {
+    0% {
+    opacity: 0;
+    transform: rotate(var(--rotate, 0deg)) translateY(200%);
+    }
+    20% {
+    opacity: 1;
+    transform: rotate(var(--rotate, 0deg)) translateY(100%);
+    }
+    80% {
+    opacity: 1;
+    transform: rotate(var(--rotate, 0deg)) translateY(-100%);
+    }
+    100% {
+    opacity: 0;
+    transform: rotate(var(--rotate, 0deg)) translateY(-200%);
+    }
+    }
+  </style>
+</svg>

@@ -1,0 +1,49 @@
+.bg-water {
+  opacity: 0.6;
+  background: linear-gradient(
+    to bottom,
+    #cce0f4 0%,
+    #c3dcf2 6.41%,
+    #a9d2ee 17.06%,
+    #80c2e7 30.66%,
+    #47acde 46.49%,
+    #1e9cd7 56.74%,
+    #0075be 86.52%,
+    #005b97 99.44%
+  );
+}
+
+.my-status {
+  @apply relative rounded-lg border-2 border-orange-500 bg-orange-400 px-3 text-white;
+}
+.my-status:before {
+  content: '';
+  left: 0;
+  top: 5px;
+  @apply absolute -z-[1] h-full w-full rounded-lg bg-orange-700;
+}
+/* 
+
+.text-stroke {
+  position: relative;
+}
+
+.text-stroke:before {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 8px rgb(36, 36, 36);
+  left: 0px;
+  top: -6px;
+  z-index: -1;
+  transform: translate(1px, 1px);
+}
+
+.text-stroke:after {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  -webkit-text-stroke: 3px white;
+  left: 0;
+  top: -6px;
+  z-index: -1;
+} */

@@ -1,0 +1,15 @@
+[
+  {
+    "Location": "苗栗管理處",
+    "Stations": [
+      { "Station": "S01", "Name": "苗栗工作站" },
+      { "Station": "S02", "Name": "公館工作站" },
+      { "Station": "S03", "Name": "後龍工作站" },
+      { "Station": "S04", "Name": "大潭工作站" },
+      { "Station": "S05", "Name": "竹南工作站" },
+      { "Station": "S06", "Name": "頭份工作站" },
+      { "Station": "S07", "Name": "大埔工作站" },
+      { "Station": "S08", "Name": "銅鑼工作站" }
+    ]
+  }
+]

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+html {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/** 美化 account auto fill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  // color: black !important;
+  // -webkit-text-fill-color: black !important;
+  // -webkit-background-clip: text !important;
+  // background-clip: text !important;
+}
+
+.my-bg {
+  background-image: url('@/CUSTOMER/assets/img-content-topbg.svg');
+  @apply bg-left-top bg-no-repeat;
+
+  @media screen and (max-width: 639px) {
+    background-position: -400px 30px;
+  }
+
+  &::after {
+    content: '';
+    @apply absolute bottom-0 z-[-1] block h-full w-full bg-right-bottom bg-no-repeat;
+    background-image: url('@/CUSTOMER/assets/img-content-bottombg-s.svg');
+    @media screen and (min-width: 640px) {
+      background-image: url('@/CUSTOMER/assets/img-content-bottombg.svg');
+    }
+  }
+}
+
+/** 燈號閃爍樣式 */
+.bg-customer-green {
+  animation: faster-brighter 1.5s infinite;
+  background-color: #75fa4c;
+  border-color: green;
+  color: #75fa4c;
+}
+.bg-customer-red {
+  animation: faster-brighter 1.5s infinite;
+  background-color: #f20804;
+  border-color: rgb(154, 21, 21);
+  color: #f20804;
+}
+
+/** 水門遙控按鈕 */
+.btn-gate {
+  @apply bg-gray-500 px-3 py-1 font-medium text-white first-of-type:rounded-t-md last-of-type:rounded-b-md;
+  &:hover,
+  &:focus,
+  &:active {
+    @apply bg-gray-600;
+  }
+  &.active {
+    @apply bg-el-primary text-white;
+  }
+  &[disabled],
+  &.disabled {
+    @apply cursor-not-allowed bg-gray-400 text-gray-200;
+  }
+}
+
+/** device svg 外層特效樣式 */
+.object {
+  @apply relative rounded-md border-[4px] border-[--border] transition-shadow;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  &:hover {
+    box-shadow:
+      0 3px 5px -3px rgb(0 0 0 / 0.2),
+      0 1px 3px -4px rgb(0 0 0 / 0.2);
+    // @apply
+  }
+  /** 分布於左與右的連接線 */
+  &.connect {
+    @apply relative;
+    &.left::after {
+      animation-direction: reverse;
+      @apply -right-5;
+    }
+    &.right::after {
+      @apply -left-5;
+    }
+    &::after {
+      content: '';
+      @apply absolute top-1/2 block h-4 w-4 -translate-y-1/2 border-y-2 border-gray-300 bg-white shadow-inner;
+    }
+    &.working::after {
+      border-color: white;
+      background-color: red;
+      background-image: linear-gradient(
+        90deg,
+        white 20%,
+        #fff0 0,
+        #fff0 20%,
+        white 0,
+        white 40%,
+        #fff0 0,
+        #fff0
+      );
+      background-size: 15px 15px;
+      --width: -15px;
+      animation-name: moveBackgroundLine;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  &.working {
+    --border-angle: 0turn;
+    --main-bg: conic-gradient(from var(--border-angle), #e5e7eb, #e5e7eb);
+    --gradient-border: conic-gradient(
+      from var(--border-angle),
+      gold 0%,
+      red 25%,
+      gold 50%,
+      red 75%,
+      gold 100%
+    );
+
+    background:
+      var(--main-bg) padding-box,
+      var(--gradient-border) border-box;
+    background-position: center center;
+    animation: bg-spin 3s linear infinite;
+  }
+
+  &.warning {
+    @apply bg-el-warning;
+    position: relative;
+    background-image: none;
+    &::before,
+    &::after {
+      background-image: linear-gradient(
+        135deg,
+        #000 15%,
+        #0000 0,
+        #0000 37%,
+        #000 0,
+        #000 65%,
+        #0000 0,
+        #0000
+      );
+      background-size: 33px 33px;
+      --width: -33px;
+      animation: moveBackgroundLine 1s linear infinite;
+      content: '';
+      @apply absolute left-0 right-0 block w-full;
+    }
+
+    &::before {
+      animation-direction: reverse;
+      @apply top-0 h-2;
+    }
+    &::after {
+      @apply bottom-0 h-2;
+    }
+    .object-body {
+    }
+  }
+}
+.bg-stripes {
+  background-color: rgba(83, 83, 83, 0.102);
+  background-image: linear-gradient(
+    135deg,
+    #eee 10%,
+    #0000 0,
+    #0000 50%,
+    #eee 0,
+    #eee 60%,
+    #0000 0,
+    #0000
+  );
+  background-size: 15px 15px;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes moveBackgroundLine {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: var(--width);
+  }
+}
+
+/** device svg 樣式 */
+.fill-online {
+  fill: #3dcb61;
+}
+.fill-offline {
+  fill: #808080ff;
+}
+
+.dynamic-color-working {
+  animation: faster-brighter 1.5s infinite;
+  stroke: #333;
+  paint-order: stroke;
+  fill: #ea232f;
+  stroke-linejoin: round;
+}
+.dynamic-color-working-shine {
+  animation: working-brighter 1.5s infinite;
+}
+
+.dynamic-color-error {
+  animation: faster-brighter 1.2s infinite;
+  fill: #fae41f !important;
+  stroke: #333;
+  paint-order: stroke;
+  stroke-linejoin: round;
+}
+
+@keyframes working-brighter {
+  0%,
+  49%,
+  100% {
+    fill: #ea232f;
+  }
+
+  50%,
+  99% {
+    fill: #3dcb61;
+  }
+}
+
+@keyframes faster-brighter {
+  0% {
+    filter: brightness(1);
+    box-shadow:
+      inset 0 0 0px #ffffff55,
+      0 0 0px currentColor;
+  }
+  50% {
+    filter: brightness(1.3); /* 倍亮度 */
+    box-shadow:
+      inset 0 0 8px #ffffff55,
+      0 0 3px currentColor;
+  }
+}
